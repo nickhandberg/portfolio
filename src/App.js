@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import About from "./about/About";
+import "./App.css";
+import Contact from "./contact/Contact";
+import Education from "./education/Education";
+import Home from "./home/Home";
+import Menu from "./nav/Menu";
+import Nav from "./nav/Nav";
+import Portfolio from "./portfolio/Portfolio";
+import Skills from "./skills/Skills";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [inMenu, setInMenu] = useState(false);
+    const [clicked, setClicked] = useState(false);
+
+    const menuClickHandler = () => {
+        setInMenu(!inMenu);
+        setClicked(true);
+    };
+
+    return (
+        <div className="App">
+            <Nav
+                inMenu={inMenu}
+                clicked={clicked}
+                menuClickHandler={menuClickHandler}
+            />
+            <AnimatePresence>
+                {inMenu && <Menu menuClickHandler={menuClickHandler} />}
+            </AnimatePresence>
+
+            <Home />
+            <About />
+            {/* <Education />
+            <Skills />
+            <Portfolio />
+            <Contact /> */}
+        </div>
+    );
 }
 
 export default App;
