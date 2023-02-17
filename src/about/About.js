@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { staggerCont, textVar } from "../utils/motion";
+import "./about.css";
 
 const About = () => {
     return (
@@ -18,13 +19,17 @@ const About = () => {
                 <motion.div
                     variants={textVar(0.4)}
                     className="contentContainer"
-                >
+                >   
+                    
                     <p className="sectionContent">
-                        This is text about me. I am writing this as a test. Do
-                        not think this is about me. This is just test text to
-                        test out the format.
+                        Hello, I am Nicholas Handberg. 
+                        I recently graduated college with a Bachelor in computer science. 
+                        I am looking to put my skills and experience to use and am hoping to 
+                        gain valuable experience in a professional enviornment. Please continue on to
+                        take a look at my education, skills, and portfolio              
                     </p>
                 </motion.div>
+                
             </motion.div>
         </section>
     );
