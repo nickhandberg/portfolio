@@ -23,10 +23,10 @@ const About = () => {
                     
                     <p className="sectionContent">
                         Hello, I am Nicholas Handberg. 
-                        I recently graduated college with a Bachelor in computer science. 
+                        I recently graduated college with a Bachelors degree in computer science. 
                         I am looking to put my skills and experience to use and am hoping to 
                         gain valuable experience in a professional enviornment. Please continue on to
-                        take a look at my education, skills, and portfolio              
+                        take a look at my education, skills, and portfolio.              
                     </p>
                 </motion.div>
                 
