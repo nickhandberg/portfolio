@@ -4,6 +4,20 @@ import * as React from "react";
 import { useEffect, useState } from "react";
 import "./skills.css";
 
+function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => {
+        images[item.replace("./", "")] = r(item);
+    });
+    return images;
+}
+
+const images = importAll(
+    require.context("../graphic/skill-icons/", false, /\.(png|jpe?g|svg)$/)
+);
+
+const colors = [];
+
 const grid = [
     [0, 1, 2, 3],
     [4, 5, 6, 7],
@@ -18,7 +32,17 @@ function getWindowDimensions() {
 
 const gap = 5;
 
-const Bubble = ({ active, setActive, colIndex, rowIndex, x, y, size }) => {
+const Bubble = ({
+    active,
+    setActive,
+    colIndex,
+    rowIndex,
+    x,
+    y,
+    size,
+    image,
+    color,
+}) => {
     const isDragging = colIndex === active.col && rowIndex === active.row;
     const diagonalIndex = (360 / 6) * (colIndex + rowIndex);
     const d = distance(
@@ -41,19 +65,26 @@ const Bubble = ({ active, setActive, colIndex, rowIndex, x, y, size }) => {
             dragElastic={0.9}
             onDragStart={() => setActive({ row: rowIndex, col: colIndex })}
             style={{
-                background: `hsla(calc(var(--base-hue) + ${diagonalIndex}), 80%, 60%, 1)`,
+                background: color,
                 width: size,
                 height: size,
                 top: rowIndex * (size + gap),
                 left: colIndex * (size + gap),
                 position: "absolute",
-                borderRadius: "50%",
+                borderRadius: "38%",
                 cursor: "pointer",
                 x: isDragging ? x : dx,
                 y: isDragging ? y : dy,
                 zIndex: isDragging ? 1 : 0,
             }}
-        />
+        >
+            <img
+                className="iconImage"
+                src={image}
+                alt="icon"
+                style={{ height: size - 0.2 * size, width: size - 0.2 * size }}
+            ></img>
+        </motion.div>
     );
 };
 
@@ -99,6 +130,8 @@ const BubbleGrid = () => {
                                 colIndex={colIndex}
                                 key={rowIndex + colIndex}
                                 size={size}
+                                image={Object.values(images)[_item]}
+                                color={colors[_item]}
                             />
                         ))
                     )}
