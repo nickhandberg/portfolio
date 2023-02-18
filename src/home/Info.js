@@ -13,12 +13,13 @@ const Info = () => {
                 variants={staggerCont}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true }}
+                viewport={{ once: false, amount: 1 }}
+                exit={{ opacity: 0 }}
             >
-                <RisingText text="Nicholas" delay={0.7} />
-                <RisingText text="Handberg" delay={0.8} />
+                <RisingText text="Nicholas" delay={0.1} />
+                <RisingText text="Handberg" delay={0.2} />
 
-                <motion.div variants={textVar(1)}>
+                <motion.div variants={textVar(0.5)}>
                     <div className="linksChunk">
                         <div className="lineSeparator"></div>
                         <div className="contactLinks">

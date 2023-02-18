@@ -1,11 +1,13 @@
 nav {
-    width: auto;
+    position: fixed;
+    width: 90%;
     height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 1rem;
     margin-left: 3rem;
+    margin-right: 3rem;
     color: var(--light-text);
 }
 
@@ -39,7 +41,7 @@ nav .navLinks {
     justify-content: start;
     column-gap: 2rem;
     z-index: 2;
-    margin-right: 10%;
+    margin-right: 2rem;
 }
 
 nav .menu {
@@ -97,7 +99,7 @@ nav a {
 
 .hMenu {
     position: fixed;
-    z-index: 3;
+    z-index: 4;
     top: 0;
     right: 0;
     width: 100%;

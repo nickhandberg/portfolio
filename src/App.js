@@ -21,17 +21,20 @@ function App() {
 
     return (
         <div className="App">
-            <Nav
-                inMenu={inMenu}
-                clicked={clicked}
-                menuClickHandler={menuClickHandler}
-            />
             <AnimatePresence>
                 {inMenu && <Menu menuClickHandler={menuClickHandler} />}
             </AnimatePresence>
+            <div className="pages">
+                <Nav
+                    inMenu={inMenu}
+                    clicked={clicked}
+                    menuClickHandler={menuClickHandler}
+                />
+                <Home />
+                <About />
+                <Skills />
+            </div>
 
-            <Home />
-            <About />
             {/* <Education />
             <Skills />
             <Portfolio />

@@ -7,9 +7,9 @@ const RisingText = ({ text, delay, duration }) => {
         <div className="risingText">
             <motion.div
                 variants={textVar(delay)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: false, amount: 1 }}
             >
                 <h1>{text}</h1>
             </motion.div>

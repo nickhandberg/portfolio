@@ -1,20 +1,15 @@
 export const navVar = {
     hidden: {
-        opacity: 0,
-        y: -50,
-        transition: {
-            type: "spring",
-            stiffness: 300,
-            damping: 400,
-        },
+        opacity: 0.2,
+        y: -55,
     },
     show: {
         opacity: 1,
         y: 0,
         transition: {
             type: "spring",
-            stiffness: 80,
-            delay: 0.1,
+            stiffness: 90,
+            delay: 1,
         },
     },
 };
@@ -38,7 +33,7 @@ export const textVar = (delay) => ({
         y: 0,
         opacity: 1,
         transition: {
-            type: "string",
+            type: "linear",
             duration: 1,
             delay,
         },
