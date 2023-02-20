@@ -36,10 +36,9 @@ const names = [
 ];
 
 const grid = [
-    [0, 1, 2, 3],
-    [4, 5, 6, 7],
-    [8, 9, 10, 11],
-    [12, 13, 14, 15],
+    [0, 1, 2, 3, 4],
+    [5, 6, 7, 8, 9],
+    [10, 11, 12, 13, 14],
 ];
 
 function getWindowDimensions() {
@@ -58,11 +57,12 @@ const Bubble = ({ colIndex, rowIndex, size, image, name }) => {
             viewport={{
                 once: false,
                 amount: 1,
-                margin: "-120px 0px 0px 0px",
+                margin: "-100px 0px -100px 0px",
             }}
             transition={{
-                delay: 0.2,
-                duration: 1,
+                delay: 0,
+                duration: 0.5,
+                type: "ease",
             }}
             style={{
                 width: size,
@@ -109,8 +109,8 @@ const BubbleGrid = () => {
                     className="bubbleContainer"
                     style={{
                         display: "flex",
-                        width: (size + gap) * 4 - gap,
-                        height: (size + gap) * 4 - gap,
+                        width: (size + gap) * grid[0].length - gap,
+                        height: (size + gap) * grid.length - gap,
                         perspective: 500,
                     }}
                 >

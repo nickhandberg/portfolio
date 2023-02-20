@@ -50,7 +50,7 @@ body {
 .contentContainer {
     margin-left: 3rem;
     margin-right: 3rem;
-
+    z-index: -1;
     border: 2px var(--light-text) solid;
     border-radius: 2ch;
     padding: 1ch;
