@@ -9,6 +9,7 @@
     padding: 1rem;
     padding-left: 3rem;
     padding-right: 3rem;
+    z-index: 2;
     color: var(--light-text);
     transition: top 0.3s;
 }
@@ -48,7 +49,7 @@ nav .navLinks {
     display: flex;
     justify-content: start;
     column-gap: 2rem;
-    z-index: 4;
+    z-index: 5;
     margin-right: 2rem;
 }
 
