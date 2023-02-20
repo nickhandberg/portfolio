@@ -1,5 +1,4 @@
-import { distance } from "@popmotion/popcorn";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import * as React from "react";
 import { useEffect, useState } from "react";
 import "./skills.css";
@@ -16,7 +15,25 @@ const images = importAll(
     require.context("../graphic/skill-icons/", false, /\.(png|jpe?g|svg)$/)
 );
 
-const colors = [];
+// skill names list
+const names = [
+    "HTML5",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "MongoDB",
+    "Express",
+    "ReactJS",
+    "NodeJS",
+    "Java",
+    "Python",
+    "PHP",
+    "Android",
+    "MySQL",
+    "Doctrine",
+    "Docker",
+    "Tailwind",
+];
 
 const grid = [
     [0, 1, 2, 3],
@@ -30,52 +47,25 @@ function getWindowDimensions() {
     return width;
 }
 
-const gap = 5;
+const gap = 8;
 
-const Bubble = ({
-    active,
-    setActive,
-    colIndex,
-    rowIndex,
-    x,
-    y,
-    size,
-    image,
-    color,
-}) => {
-    const isDragging = colIndex === active.col && rowIndex === active.row;
-    const diagonalIndex = (360 / 6) * (colIndex + rowIndex);
-    const d = distance(
-        { x: active.col, y: active.row },
-        { x: colIndex, y: rowIndex }
-    );
-    const springConfig = {
-        stiffness: Math.max(700 - d * 120, 0),
-        damping: 20 + d * 5,
-    };
-    const dx = useSpring(x, springConfig);
-    const dy = useSpring(y, springConfig);
-
+const Bubble = ({ colIndex, rowIndex, size, image, name }) => {
     return (
         <motion.div
             className="bubble"
-            drag
-            dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-            dragTransition={{ bounceStiffness: 500, bounceDamping: 20 }}
-            dragElastic={0.9}
-            onDragStart={() => setActive({ row: rowIndex, col: colIndex })}
+            initial={{ scale: 0, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{
+                delay: 0.2,
+                duration: 1,
+            }}
             style={{
-                background: color,
                 width: size,
                 height: size,
                 top: rowIndex * (size + gap),
                 left: colIndex * (size + gap),
                 position: "absolute",
                 borderRadius: "38%",
-                cursor: "pointer",
-                x: isDragging ? x : dx,
-                y: isDragging ? y : dy,
-                zIndex: isDragging ? 1 : 0,
             }}
         >
             <img
@@ -84,15 +74,14 @@ const Bubble = ({
                 alt="icon"
                 style={{ height: size - 0.2 * size, width: size - 0.2 * size }}
             ></img>
+            <p className="skillName" style={{ bottom: -size / 4 }}>
+                {name}
+            </p>
         </motion.div>
     );
 };
 
 const BubbleGrid = () => {
-    const [active, setActive] = useState({ row: null, col: null });
-    const x = useMotionValue(0);
-    const y = useMotionValue(0);
-
     const [size, setSize] = useState(Math.min(getWindowDimensions() / 6, 150));
 
     useEffect(() => {
@@ -103,6 +92,7 @@ const BubbleGrid = () => {
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
+
     return (
         <div>
             <motion.div
@@ -122,16 +112,12 @@ const BubbleGrid = () => {
                     {grid.map((row, rowIndex) =>
                         row.map((_item, colIndex) => (
                             <Bubble
-                                x={x}
-                                y={y}
-                                active={active}
-                                setActive={setActive}
                                 rowIndex={rowIndex}
                                 colIndex={colIndex}
                                 key={rowIndex + colIndex}
                                 size={size}
                                 image={Object.values(images)[_item]}
-                                color={colors[_item]}
+                                name={names[_item]}
                             />
                         ))
                     )}

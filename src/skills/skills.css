@@ -9,15 +9,38 @@
 .iconImage {
     margin-left: auto;
     margin-right: auto;
-    user-drag: none;
+    /* user-drag: none;
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
-    -ms-user-select: none;
+    -ms-user-select: none; */
 }
 
 .bubble {
     display: flex;
     align-items: center;
+}
+
+.skillName {
+    font-size: 0.5rem;
+    display: block;
+    position: absolute;
+    /* bottom: -15px; */
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--light-text);
+    padding-left: 1ch;
+    padding-right: 1ch;
+    border-radius: 15%;
+}
+
+@media (min-width: 600px) {
+    .skillName {
+        font-size: 1rem;
+        /* bottom: -30px; */
+    }
 }

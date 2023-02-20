@@ -17,9 +17,8 @@ const Skills = () => {
                 <motion.div variants={textVar(0.2)} className="sectionTitle">
                     Skills
                 </motion.div>
-                <motion.div className="bubbleGrid" variants={textVar(0.5)}>
-                    <BubbleGrid></BubbleGrid>
-                </motion.div>
+
+                <BubbleGrid></BubbleGrid>
             </motion.div>
         </section>
     );
