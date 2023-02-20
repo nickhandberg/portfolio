@@ -14,6 +14,20 @@ function App() {
     const [inMenu, setInMenu] = useState(false);
     const [clicked, setClicked] = useState(false);
 
+    let prevScrollpos = 0;
+    const handleScroll = () => {
+        let pages = document.getElementById("scrollCatch");
+        let currentScrollPos = pages.scrollTop;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+            document.getElementById("menu").style.top = "20px";
+        } else {
+            document.getElementById("navbar").style.top = "-80px";
+            document.getElementById("menu").style.top = "-80px";
+        }
+        prevScrollpos = currentScrollPos;
+    };
+
     const menuClickHandler = () => {
         setInMenu(!inMenu);
         setClicked(true);
@@ -24,7 +38,7 @@ function App() {
             <AnimatePresence>
                 {inMenu && <Menu menuClickHandler={menuClickHandler} />}
             </AnimatePresence>
-            <div className="pages">
+            <div id="scrollCatch" className="pages" onScroll={handleScroll}>
                 <Nav
                     inMenu={inMenu}
                     clicked={clicked}

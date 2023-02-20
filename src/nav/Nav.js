@@ -23,7 +23,12 @@ const Nav = ({ inMenu, clicked, menuClickHandler }) => {
                     transition={{ duration: 1 }}
                 />
             )}
-            <motion.nav variants={navVar} initial="hidden" whileInView="show">
+            <motion.nav
+                id="navbar"
+                variants={navVar}
+                initial="hidden"
+                whileInView="show"
+            >
                 <div className="gradient-01"></div>
                 <a className="logo" href="#home">
                     NH
@@ -48,6 +53,7 @@ const Nav = ({ inMenu, clicked, menuClickHandler }) => {
                         {!inMenu && (
                             <motion.div
                                 className="menu"
+                                id="menu"
                                 whileHover={{ scale: 1.1 }}
                             >
                                 <box-icon

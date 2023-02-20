@@ -1,5 +1,6 @@
-nav {
+#navbar {
     position: fixed;
+    top: 0;
     width: 90%;
     height: 50px;
     display: flex;
@@ -9,6 +10,7 @@ nav {
     padding-left: 3rem;
     padding-right: 3rem;
     color: var(--light-text);
+    transition: top 0.3s;
 }
 
 .logo {
@@ -50,14 +52,15 @@ nav .navLinks {
     margin-right: 2rem;
 }
 
-nav .menu {
+.menu {
     display: none;
     cursor: pointer;
     position: fixed;
-    top: 1.2rem;
-    right: 2rem;
+    top: 20px;
+    right: 30px;
     cursor: pointer;
     color: var(--light-text);
+    transition: top 0.3s;
 }
 
 .growingCircle {
