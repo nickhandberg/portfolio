@@ -35,7 +35,7 @@ const names = [
     "Tailwind",
 ];
 
-const grid = [
+let grid = [
     [0, 1, 2, 3, 4],
     [5, 6, 7, 8, 9],
     [10, 11, 12, 13, 14],
@@ -88,15 +88,45 @@ const Bubble = ({ colIndex, rowIndex, size, image, name }) => {
 
 const BubbleGrid = () => {
     const [size, setSize] = useState(Math.min(getWindowDimensions() / 6, 150));
+    const [grid, setGrid] = useState([
+        [0, 1, 2, 3, 4],
+        [5, 6, 7, 8, 9],
+        [10, 11, 12, 13, 14],
+    ]);
+
+    if (size < 100) {
+        let grid = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [9, 10, 11],
+            [12, 13, 14],
+        ];
+    }
 
     useEffect(() => {
         function handleResize() {
             setSize(Math.min(getWindowDimensions() / 6, 150));
+            if (size < 100) {
+                setGrid([
+                    [0, 1, 2],
+                    [3, 4, 5],
+                    [6, 7, 8],
+                    [9, 10, 11],
+                    [12, 13, 14],
+                ]);
+            } else {
+                setGrid([
+                    [0, 1, 2, 3, 4],
+                    [5, 6, 7, 8, 9],
+                    [10, 11, 12, 13, 14],
+                ]);
+            }
         }
 
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
-    }, []);
+    }, [size]);
 
     return (
         <div>
