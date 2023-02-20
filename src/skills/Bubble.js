@@ -58,7 +58,7 @@ const Bubble = ({ colIndex, rowIndex, size, image, name }) => {
             viewport={{
                 once: false,
                 amount: 1,
-                margin: "-100px 0px 0px 0px",
+                margin: "-120px 0px 0px 0px",
             }}
             transition={{
                 delay: 0.2,
