@@ -11,6 +11,12 @@ nav {
     color: var(--light-text);
 }
 
+.logo {
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 3;
+}
+
 nav .gradient-01 {
     position: absolute;
     width: 100%;
@@ -46,6 +52,10 @@ nav .navLinks {
 
 nav .menu {
     display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 1.2rem;
+    right: 2rem;
     cursor: pointer;
     color: var(--light-text);
 }

@@ -4,7 +4,7 @@ import Info from "./Info";
 
 const Home = () => {
     return (
-        <main className="pageContainer">
+        <main id="home" className="pageContainer">
             <div className="home">
                 <Info />
             </div>

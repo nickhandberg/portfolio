@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import RisingText from "../home/RisingText";
-import SlamText from "./SlamText";
+import MenuItems from "./MenuItems";
 
 const Menu = ({ menuClickHandler }) => {
     return (
@@ -14,44 +14,50 @@ const Menu = ({ menuClickHandler }) => {
                 >
                     <box-icon name="x" size="lg"></box-icon>
                 </motion.div>
-                <RisingText text="Menu" delay={0.5} duration={0}></RisingText>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.5, duration: 1 }}
+                >
+                    <h1>Menu</h1>
+                </motion.div>
 
                 <li className="list">
-                    <SlamText
+                    <MenuItems
                         name={"Home"}
-                        link={"index.html"}
-                        degree={4}
+                        link={"#home"}
                         delay={0.5}
+                        menuClickHandler={menuClickHandler}
                     />
-                    <SlamText
+                    <MenuItems
                         name={"About"}
-                        link={"index.html"}
-                        degree={-4}
+                        link={"#about"}
                         delay={0.6}
+                        menuClickHandler={menuClickHandler}
                     />
-                    <SlamText
+                    <MenuItems
                         name={"Education"}
-                        link={"index.html"}
-                        degree={4}
+                        link={"#education"}
                         delay={0.7}
+                        menuClickHandler={menuClickHandler}
                     />
-                    <SlamText
+                    <MenuItems
                         name={"Skills"}
-                        link={"index.html"}
-                        degree={-4}
+                        link={"#skills"}
                         delay={0.8}
+                        menuClickHandler={menuClickHandler}
                     />
-                    <SlamText
+                    <MenuItems
                         name={"Portfolio"}
-                        link={"index.html"}
-                        degree={4}
+                        link={"#portfolio"}
                         delay={0.9}
+                        menuClickHandler={menuClickHandler}
                     />
-                    <SlamText
+                    <MenuItems
                         name={"Contact"}
-                        link={"index.html"}
-                        degree={-4}
+                        link={"#contact"}
                         delay={1}
+                        menuClickHandler={menuClickHandler}
                     />
                 </li>
             </ul>

@@ -55,6 +55,11 @@ const Bubble = ({ colIndex, rowIndex, size, image, name }) => {
             className="bubble"
             initial={{ scale: 0, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{
+                once: false,
+                amount: 1,
+                margin: "-100px 0px 0px 0px",
+            }}
             transition={{
                 delay: 0.2,
                 duration: 1,

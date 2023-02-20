@@ -6,7 +6,7 @@ import "./about.css";
 
 const About = () => {
     return (
-        <section className="pageContainer">
+        <section id="about" className="pageContainer">
             <motion.div
                 className="about"
                 variants={staggerCont}

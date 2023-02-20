@@ -6,15 +6,20 @@ import "./skills.css";
 
 const Skills = () => {
     return (
-        <section className="pageContainer">
-            <motion.div
-                className="skills"
-                variants={staggerCont}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.25 }}
-            >
-                <motion.div variants={textVar(0.2)} className="sectionTitle">
+        <section id="skills" className="pageContainer">
+            <motion.div className="skills">
+                <motion.div
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{
+                        once: false,
+                        amount: 1,
+                        margin: "-50px 0px 0px 0px",
+                    }}
+                    className="sectionTitle"
+                    transition={{ duration: 1, delay: 0 }}
+                    exit={{ opacity: 0, y: 0 }}
+                >
                     Skills
                 </motion.div>
 

@@ -25,35 +25,37 @@ const Nav = ({ inMenu, clicked, menuClickHandler }) => {
             )}
             <motion.nav variants={navVar} initial="hidden" whileInView="show">
                 <div className="gradient-01"></div>
-                <h1 className="logo">NH</h1>
+                <a className="logo" href="#home">
+                    NH
+                </a>
 
                 <div className="navLinks">
-                    <NavLink name={"Home"} link={"index.html"} degree={4} />
-                    <NavLink name={"About"} link={"index.html"} degree={-4} />
+                    <NavLink name={"Home"} link={"#home"} />
+                    <NavLink name={"About"} link={"#about"} />
                     <NavLink
                         name={"Education"}
-                        link={"index.html"}
+                        link={"#education"}
                         degree={4}
                     />
-                    <NavLink name={"Skills"} link={"index.html"} degree={-4} />
+                    <NavLink name={"Skills"} link={"#skills"} />
                     <NavLink
                         name={"Portfolio"}
-                        link={"index.html"}
+                        link={"#portfolio"}
                         degree={4}
                     />
-                    <NavLink name={"Contact"} link={"index.html"} degree={-4} />
-                    <motion.div
-                        onClick={menuClickHandler}
-                        whileHover={{ scale: 1.1 }}
-                    >
+                    <NavLink name={"Contact"} link={"#contact"} />
+                    <motion.div onClick={menuClickHandler}>
                         {!inMenu && (
-                            <div className="menu">
+                            <motion.div
+                                className="menu"
+                                whileHover={{ scale: 1.1 }}
+                            >
                                 <box-icon
                                     name="menu"
                                     size="md"
                                     color="rgba(232,232,232,1)"
                                 ></box-icon>
-                            </div>
+                            </motion.div>
                         )}
                     </motion.div>
                 </div>

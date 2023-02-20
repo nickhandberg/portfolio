@@ -32,13 +32,11 @@ function App() {
                 />
                 <Home />
                 <About />
+                <Education />
                 <Skills />
+                <Portfolio />
+                <Contact />
             </div>
-
-            {/* <Education />
-            <Skills />
-            <Portfolio />
-            <Contact /> */}
         </div>
     );
 }

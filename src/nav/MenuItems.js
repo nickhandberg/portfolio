@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-const SlamText = ({ name, link, delay }) => {
+const MenuItems = ({ name, link, delay, menuClickHandler }) => {
     return (
         <motion.div
             className="navLink"
@@ -9,9 +9,11 @@ const SlamText = ({ name, link, delay }) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.1, delay: delay }}
         >
-            <a href={link}>{name}</a>
+            <a href={link} onClick={menuClickHandler}>
+                {name}
+            </a>
         </motion.div>
     );
 };
 
-export default SlamText;
+export default MenuItems;
