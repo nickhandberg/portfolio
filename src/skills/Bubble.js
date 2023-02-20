@@ -107,7 +107,7 @@ const BubbleGrid = () => {
     useEffect(() => {
         function handleResize() {
             setSize(Math.min(getWindowDimensions() / 6, 150));
-            if (size < 100) {
+            if (size < 150) {
                 setGrid([
                     [0, 1, 2],
                     [3, 4, 5],
