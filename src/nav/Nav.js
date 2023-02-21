@@ -38,7 +38,7 @@ const Nav = ({ inMenu, clicked, menuClickHandler }) => {
                     <NavLink name={"Home"} link={"#home"} />
                     <NavLink name={"About"} link={"#about"} />
                     <NavLink
-                        name={"Education"}
+                        name={"Experience"}
                         link={"#education"}
                         degree={4}
                     />
