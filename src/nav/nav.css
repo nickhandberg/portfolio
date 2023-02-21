@@ -51,6 +51,7 @@ nav .navLinks {
     column-gap: 2rem;
     z-index: 5;
     margin-right: 2rem;
+    text-transform: uppercase;
 }
 
 .menu {
@@ -95,6 +96,7 @@ nav .navLinks {
     font-size: 7ch;
     margin-top: 0;
     margin-bottom: 0;
+    font-variant: small-caps;
 }
 
 .hMenu a {
@@ -102,6 +104,7 @@ nav .navLinks {
     text-decoration: none;
     font-size: 2rem;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 nav a {

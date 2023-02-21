@@ -39,6 +39,7 @@ body {
     font-size: 7ch;
     font-weight: 600;
     text-align: center;
+    font-variant: small-caps;
 }
 
 .sectionContent {

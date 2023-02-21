@@ -19,7 +19,7 @@ const Education = () => {
                 </motion.div>
                 <div className="graphContainer">
                     <div className="educationContainer">
-                        <h2>Education</h2>
+                        <h2 className="graphLabel">Education</h2>
                         <GraphItem
                             title="BS Computer Science"
                             location="Concordia University, St. Paul"
@@ -36,7 +36,7 @@ const Education = () => {
                         />
                     </div>
                     <div className="experienceContainer">
-                        <h2>Work</h2>
+                        <h2 className="graphLabel">Work</h2>
                         <GraphItem
                             title="Manufacturing Technician"
                             location="Winchester Interconnect"

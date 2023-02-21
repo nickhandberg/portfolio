@@ -1,3 +1,11 @@
+.education {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
 .graphContainer {
     display: flex;
     gap: 3rem;
@@ -18,6 +26,10 @@
     gap: 1rem;
 }
 
+.graphLabel {
+    text-transform: uppercase;
+}
+
 .graphItem {
     /* border: 1px solid var(--light-text); */
     padding: 0.5rem;
@@ -26,7 +38,7 @@
     cursor: pointer;
     min-height: 150px;
     width: 45vw;
-    max-width: 500px;
+    max-width: 700px;
 }
 
 .graphContainer h3 {
@@ -62,12 +74,15 @@
         font-size: 0.75rem;
     }
     .graphContainer h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .graphContainer .details {
         font-size: 0.6rem;
     }
     .graphContainer {
         gap: 1rem;
+    }
+    .education .sectionTitle {
+        font-size: 4rem;
     }
 }
