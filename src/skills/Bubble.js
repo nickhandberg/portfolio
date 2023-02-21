@@ -46,7 +46,7 @@ function getWindowDimensions() {
     return width;
 }
 
-const gap = 8;
+const gap = 10;
 
 const Bubble = ({ colIndex, rowIndex, size, image, name }) => {
     return (
@@ -79,30 +79,28 @@ const Bubble = ({ colIndex, rowIndex, size, image, name }) => {
                 alt="icon"
                 style={{ height: size - 0.2 * size, width: size - 0.2 * size }}
             ></img>
-            <p className="skillName" style={{ bottom: -size / 4 }}>
-                {name}
-            </p>
+            <p className="skillName">{name}</p>
         </motion.div>
     );
 };
 
 const BubbleGrid = () => {
-    const [size, setSize] = useState(Math.min(getWindowDimensions() / 6, 150));
-    const [grid, setGrid] = useState([
-        [0, 1, 2, 3, 4],
-        [5, 6, 7, 8, 9],
-        [10, 11, 12, 13, 14],
-    ]);
-
-    if (size < 100) {
-        let grid = [
-            [0, 1, 2],
-            [3, 4, 5],
-            [6, 7, 8],
-            [9, 10, 11],
-            [12, 13, 14],
-        ];
-    }
+    const [size, setSize] = useState(Math.min(getWindowDimensions() / 4, 150));
+    const [grid, setGrid] = useState(
+        size < 150
+            ? [
+                  [0, 1, 2],
+                  [3, 4, 5],
+                  [6, 7, 8],
+                  [9, 10, 11],
+                  [12, 13, 14],
+              ]
+            : [
+                  [0, 1, 2, 3, 4],
+                  [5, 6, 7, 8, 9],
+                  [10, 11, 12, 13, 14],
+              ]
+    );
 
     useEffect(() => {
         function handleResize() {
