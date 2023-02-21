@@ -1,0 +1,53 @@
+.graphContainer {
+    display: flex;
+    gap: 3rem;
+    color: var(--light-text);
+}
+
+.educationContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.experienceContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.graphItem {
+    border: 1px solid var(--light-text);
+    padding: 0.5rem;
+    padding-bottom: 0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.graphContainer h3 {
+    margin: 0;
+    color: var(--pastel-green);
+}
+
+.graphContainer h2 {
+    text-align: center;
+    margin: 0;
+}
+
+.graphContainer p {
+    margin: 0;
+}
+
+.chevron {
+    position: relative;
+    bottom: 0;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .graphContainer p {
+        font-size: 0.75rem;
+    }
+}

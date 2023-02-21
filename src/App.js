@@ -18,12 +18,16 @@ function App() {
     const handleScroll = () => {
         let pages = document.getElementById("scrollCatch");
         let currentScrollPos = pages.scrollTop;
+        if (currentScrollPos === 0) {
+            document.getElementById("downArrow").style.display = "block";
+        }
         if (prevScrollpos > currentScrollPos) {
             document.getElementById("navbar").style.top = "0";
             document.getElementById("menu").style.top = "20px";
         } else {
             document.getElementById("navbar").style.top = "-80px";
             document.getElementById("menu").style.top = "-80px";
+            document.getElementById("downArrow").style.display = "none";
         }
         prevScrollpos = currentScrollPos;
     };

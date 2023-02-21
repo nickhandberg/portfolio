@@ -47,6 +47,7 @@ const Info = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
+                id="downArrow"
                 className="downArrow"
                 src={arrow}
                 alt="Down Arrow"

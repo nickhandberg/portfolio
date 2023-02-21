@@ -42,6 +42,7 @@
     align-self: center;
     width: 25px;
     height: 50px;
+    transition: "display" 0.3s;
 }
 
 .home .lineSeparator {
