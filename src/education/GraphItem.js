@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { React, useState } from "react";
 
-const GraphItem = ({ title, location, details }) => {
+const GraphItem = ({ title, location, date, details }) => {
     const [showDetails, setShowDetails] = useState(false);
 
     return (
@@ -23,6 +23,7 @@ const GraphItem = ({ title, location, details }) => {
         >
             <h3>{title}</h3>
             <p>{location}</p>
+            {showDetails && <p className="details">{date}</p>}
             {showDetails && <p className="details">{details}</p>}
 
             <div className="chevron">
