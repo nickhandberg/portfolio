@@ -45,6 +45,10 @@ const Education = () => {
                             title="Programming Intern"
                             location="Interstates Control Systems"
                         />
+                        <GraphItem
+                            title="Cashier and Cook"
+                            location="Domino's Pizza "
+                        />
                     </div>
                 </div>
             </motion.div>

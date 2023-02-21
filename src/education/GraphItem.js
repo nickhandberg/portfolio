@@ -7,7 +7,7 @@ const GraphItem = ({ title, location, details }) => {
         <div className="graphItem" onClick={() => setShowDetails(!showDetails)}>
             <h3>{title}</h3>
             {showDetails && <p>{location}</p>}
-            {showDetails && <p>{details}</p>}
+            {showDetails && <p className="details">{details}</p>}
 
             <div className="chevron">
                 <box-icon

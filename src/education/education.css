@@ -19,25 +19,36 @@
 }
 
 .graphItem {
-    border: 1px solid var(--light-text);
+    /* border: 1px solid var(--light-text); */
     padding: 0.5rem;
     padding-bottom: 0;
     border-radius: 20px;
     cursor: pointer;
+    min-height: 150px;
+    width: 45vw;
+    max-width: 500px;
 }
 
 .graphContainer h3 {
     margin: 0;
     color: var(--pastel-green);
+    font-size: 2.4rem;
 }
 
 .graphContainer h2 {
     text-align: center;
     margin: 0;
+    margin-top: 1rem;
 }
 
 .graphContainer p {
+    font-size: 1.5rem;
     margin: 0;
+}
+
+.graphContainer .details {
+    font-size: 1rem;
+    margin-top: 1rem;
 }
 
 .chevron {
@@ -49,5 +60,14 @@
 @media (max-width: 900px) {
     .graphContainer p {
         font-size: 0.75rem;
+    }
+    .graphContainer h3 {
+        font-size: 1.5rem;
+    }
+    .graphContainer .details {
+        font-size: 0.6rem;
+    }
+    .graphContainer {
+        gap: 1rem;
     }
 }
