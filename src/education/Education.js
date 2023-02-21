@@ -3,6 +3,7 @@ import React from "react";
 import { staggerCont, textVar } from "../utils/motion";
 import "./education.css";
 import GraphItem from "./GraphItem";
+import GraphTitle from "./GraphTitle";
 
 const Education = () => {
     return (
@@ -19,7 +20,7 @@ const Education = () => {
                 </motion.div>
                 <div className="graphContainer">
                     <div className="educationContainer">
-                        <h2 className="graphLabel">Education</h2>
+                        <GraphTitle title="Education" />
                         <GraphItem
                             title="BS Computer Science"
                             location="Concordia University, St. Paul"
@@ -36,7 +37,7 @@ const Education = () => {
                         />
                     </div>
                     <div className="experienceContainer">
-                        <h2 className="graphLabel">Work</h2>
+                        <GraphTitle title="Work" />
                         <GraphItem
                             title="Manufacturing Technician"
                             location="Winchester Interconnect"

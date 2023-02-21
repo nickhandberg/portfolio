@@ -1,12 +1,28 @@
+import { motion } from "framer-motion";
 import { React, useState } from "react";
 
 const GraphItem = ({ title, location, details }) => {
     const [showDetails, setShowDetails] = useState(false);
 
     return (
-        <div className="graphItem" onClick={() => setShowDetails(!showDetails)}>
+        <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{
+                once: false,
+                amount: 1,
+                margin: "-100px 0px -100px 0px",
+            }}
+            transition={{
+                delay: 0,
+                duration: 0.5,
+                type: "ease",
+            }}
+            className="graphItem"
+            onClick={() => setShowDetails(!showDetails)}
+        >
             <h3>{title}</h3>
-            {showDetails && <p>{location}</p>}
+            <p>{location}</p>
             {showDetails && <p className="details">{details}</p>}
 
             <div className="chevron">
@@ -16,7 +32,7 @@ const GraphItem = ({ title, location, details }) => {
                     color="rgba(232,232,232,1)"
                 ></box-icon>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
