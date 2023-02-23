@@ -3,7 +3,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 export default class SceneInit {
     particlesGeometry = new THREE.BufferGeometry();
-    particlesCnt = 5000;
+    particlesCnt = 2000;
     mouseY = 0;
     posArray = new Float32Array(this.particlesCnt * 3);
     material = new THREE.PointsMaterial({
