@@ -19,6 +19,11 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: none;
 }
 
 .pageContainer {
@@ -56,6 +61,13 @@ body {
     border-radius: 2ch;
     padding: 1ch;
     backdrop-filter: blur(20px);
+}
+
+#myThreeJsCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 @media (min-width: 600px) {
