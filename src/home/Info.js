@@ -48,7 +48,7 @@ const Info = () => {
                                 type="logo"
                             />
                             <InfoIcon
-                                link=""
+                                link="mailto:nickh12312@gmail.com"
                                 iconName="envelope"
                                 type="default"
                             />
