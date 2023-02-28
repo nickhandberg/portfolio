@@ -54,3 +54,11 @@ button {
     font-weight: 700;
     cursor: pointer;
 }
+
+#thanks {
+    text-align: center;
+    color: var(--light-text);
+    font-size: 2rem;
+    margin-top: 10rem;
+    max-width: 400px;
+}
