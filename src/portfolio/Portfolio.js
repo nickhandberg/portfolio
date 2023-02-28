@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { staggerCont, textVar } from "../utils/motion";
 import { importAll } from "../utils/utils";
 import "./portfolio.css";
 import PortfolioCard from "./PortfolioCard";
@@ -32,17 +31,32 @@ const titles = ["ImageGenApp", "FreshMart", "EmeraldTV", "ZombieWar"];
 const Portfolio = () => {
     return (
         <section id="portfolio" className="pageContainer">
-            <motion.div
-                className="portfolio"
-                variants={staggerCont}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.25 }}
-            >
-                <motion.div variants={textVar(0.25)} className="sectionTitle">
+            <motion.div>
+                <motion.div
+                    className="sectionTitle"
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{
+                        once: false,
+                        amount: 1,
+                        margin: "-50px 0px 0px 0px",
+                    }}
+                    transition={{ duration: 0.5, delay: 0 }}
+                    exit={{ opacity: 0, y: 0 }}
+                >
                     Portfolio
                 </motion.div>
-                <motion.div variants={textVar(0.3)}>
+                <motion.div
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{
+                        once: false,
+                        amount: 1,
+                        margin: "-50px 0px 0px 0px",
+                    }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    exit={{ opacity: 0, y: 0 }}
+                >
                     <p id="portfolioNotice">
                         tap or hover on cards to view details
                     </p>

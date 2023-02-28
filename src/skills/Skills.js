@@ -6,8 +6,8 @@ import "./skills.css";
 
 const Skills = () => {
     return (
-        <section className="pageContainer">
-            <motion.div id="skills" className="skills">
+        <section id="skills" className="pageContainer">
+            <motion.div className="skills">
                 <motion.div
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}

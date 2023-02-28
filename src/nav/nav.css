@@ -45,6 +45,10 @@ nav h1 {
     margin-right: 5rem;
 }
 
+.active {
+    text-decoration: underline;
+}
+
 nav .navLinks {
     display: flex;
     justify-content: start;

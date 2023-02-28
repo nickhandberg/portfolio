@@ -1,6 +1,5 @@
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import * as THREE from "three";
 import About from "./about/About";
 import "./App.css";
 import Contact from "./contact/Contact";
@@ -16,7 +15,6 @@ function App() {
     const [inMenu, setInMenu] = useState(false);
     const [clicked, setClicked] = useState(false);
     const test = new SceneInit("myThreeJsCanvas");
-
     let isScrolling = false;
 
     useEffect(() => {
