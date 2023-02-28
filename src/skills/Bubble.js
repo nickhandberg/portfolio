@@ -1,15 +1,8 @@
 import { motion } from "framer-motion";
 import * as React from "react";
 import { useEffect, useState } from "react";
+import { importAll } from "../utils/utils";
 import "./skills.css";
-
-function importAll(r) {
-    let images = {};
-    r.keys().map((item, index) => {
-        images[item.replace("./", "")] = r(item);
-    });
-    return images;
-}
 
 const images = importAll(
     require.context("../graphic/skill-icons/", false, /\.(png|jpe?g|svg)$/)

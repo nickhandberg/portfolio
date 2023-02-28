@@ -1,0 +1,86 @@
+#portfolio {
+    height: fit-content;
+    padding-top: 20vh;
+}
+
+#portfolioNotice {
+    color: var(--light-text);
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+#portfolioGrid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 0.75rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolioCard {
+    position: relative;
+    border-radius: 0.75rem;
+    width: 100%;
+}
+
+.portfolioImage {
+    border-radius: 0.75rem;
+    width: 100%;
+    height: auto;
+}
+
+.cardHover {
+    visibility: hidden;
+    color: var(--light-text);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 0.375rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0.75rem;
+    padding: 1rem;
+    background-color: #18202b;
+}
+
+.portfolioLinks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cardTitle {
+    text-align: center;
+}
+
+.cardDescription {
+    text-align: center;
+}
+
+.liveLink {
+    color: var(--light-text);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.25rem;
+    vertical-align: middle;
+}
+
+.portfolioCard:hover .cardHover {
+    visibility: visible;
+}
+
+@media (min-width: 480px) {
+    #portfolioGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 640px) {
+    #portfolioGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
