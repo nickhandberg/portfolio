@@ -1,0 +1,56 @@
+#contact {
+    height: fit-content;
+    padding-top: 10vh;
+    padding-bottom: 20vh;
+    min-height: 80vh;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: var(--light-text);
+    font-size: 2rem;
+    text-align: center;
+    margin: 0.5rem;
+    text-transform: capitalize;
+}
+
+input {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    min-width: 25vw;
+}
+
+input:focus-within {
+    outline: 3px solid var(--pastel-green);
+}
+
+textarea:focus-within {
+    outline: 3px solid var(--pastel-green);
+}
+
+textarea {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    height: auto;
+    outline: none;
+    border: none;
+}
+
+button {
+    font-size: 2rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--pastel-green);
+    font-weight: 700;
+    cursor: pointer;
+}
