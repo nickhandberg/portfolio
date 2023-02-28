@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import RisingText from "../home/RisingText";
-import MenuItems from "./MenuItems";
+import MenuItem from "./MenuItem";
 
 const Menu = ({ menuClickHandler }) => {
     return (
@@ -23,37 +23,37 @@ const Menu = ({ menuClickHandler }) => {
                 </motion.div>
 
                 <li className="list">
-                    <MenuItems
+                    <MenuItem
                         name={"Home"}
                         link={"#home"}
                         delay={0.5}
                         menuClickHandler={menuClickHandler}
                     />
-                    <MenuItems
+                    <MenuItem
                         name={"About"}
                         link={"#about"}
                         delay={0.6}
                         menuClickHandler={menuClickHandler}
                     />
-                    <MenuItems
+                    <MenuItem
                         name={"Experience"}
                         link={"#education"}
                         delay={0.7}
                         menuClickHandler={menuClickHandler}
                     />
-                    <MenuItems
+                    <MenuItem
                         name={"Skills"}
                         link={"#skills"}
                         delay={0.8}
                         menuClickHandler={menuClickHandler}
                     />
-                    <MenuItems
+                    <MenuItem
                         name={"Portfolio"}
                         link={"#portfolio"}
                         delay={0.9}
                         menuClickHandler={menuClickHandler}
                     />
-                    <MenuItems
+                    <MenuItem
                         name={"Contact"}
                         link={"#contact"}
                         delay={1}

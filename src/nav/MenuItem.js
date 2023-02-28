@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-const MenuItems = ({ name, link, delay, menuClickHandler }) => {
+const MenuItem = ({ name, link, delay, menuClickHandler }) => {
     return (
         <motion.div
             className="navLink"
@@ -16,4 +16,4 @@ const MenuItems = ({ name, link, delay, menuClickHandler }) => {
     );
 };
 
-export default MenuItems;
+export default MenuItem;

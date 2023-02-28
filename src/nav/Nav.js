@@ -4,7 +4,7 @@ import { navVar } from "../utils/motion";
 import "./nav.css";
 import NavLink from "./NavLink";
 
-const Nav = ({ inMenu, clicked, menuClickHandler }) => {
+const Nav = ({ inMenu, clicked, menuClickHandler, preventHide }) => {
     return (
         <header>
             {inMenu && clicked && (
@@ -35,20 +35,36 @@ const Nav = ({ inMenu, clicked, menuClickHandler }) => {
                 </a>
 
                 <div className="navLinks">
-                    <NavLink name={"Home"} link={"#home"} />
-                    <NavLink name={"About"} link={"#about"} />
+                    <NavLink
+                        name={"Home"}
+                        link={"#home"}
+                        preventHide={preventHide}
+                    />
+                    <NavLink
+                        name={"About"}
+                        link={"#about"}
+                        preventHide={preventHide}
+                    />
                     <NavLink
                         name={"Experience"}
                         link={"#education"}
-                        degree={4}
+                        preventHide={preventHide}
                     />
-                    <NavLink name={"Skills"} link={"#skills"} />
+                    <NavLink
+                        name={"Skills"}
+                        link={"#skills"}
+                        preventHide={preventHide}
+                    />
                     <NavLink
                         name={"Portfolio"}
                         link={"#portfolio"}
-                        degree={4}
+                        preventHide={preventHide}
                     />
-                    <NavLink name={"Contact"} link={"#contact"} />
+                    <NavLink
+                        name={"Contact"}
+                        link={"#contact"}
+                        preventHide={preventHide}
+                    />
                     <motion.div onClick={menuClickHandler}>
                         {!inMenu && (
                             <motion.div

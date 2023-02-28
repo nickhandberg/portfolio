@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-const NavLink = ({ name, link }) => {
+const NavLink = ({ name, link, preventHide }) => {
     return (
         <motion.div className="navLink" whileHover={{ scale: 1.1 }}>
-            <a href={link}>{name}</a>
+            <a onClick={preventHide} href={link}>
+                {name}
+            </a>
         </motion.div>
     );
 };

@@ -18,7 +18,7 @@ const links = [
 
 const descriptions = [
     "AI image generation app built using the MERN stack and OpenAI api",
-    "Grocery marketplace site built with React and tailwind frontend, PHP and Doctrine backend, and MariaDB",
+    "Grocery marketplace site built with React, Tailwind, PHP, Doctrine, and MariaDB",
     "Alternative Android/AndroidTV app for Hulu that uses a built in script to fast forward through ad breaks",
     "ZombieWar simulation in which different classes of zombies and humans engage in a simulated war",
 ];
