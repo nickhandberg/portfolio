@@ -11,3 +11,10 @@
     align-items: center;
     justify-content: center;
 }
+
+.greenText {
+    color: var(--pastel-green);
+    font-variant: small-caps;
+    font-size: 2.5rem;
+    text-align: center;
+}

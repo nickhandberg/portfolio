@@ -59,6 +59,18 @@ export const textVar2 = (delay) => ({
     },
 });
 
+export const textVar3 = () => ({
+    initial: { opacity: 0, y: 100 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: {
+        once: false,
+        amount: 1,
+        margin: "-50px 0px 0px 0px",
+    },
+    transition: { duration: 0.5, delay: 0 },
+    exit: { opacity: 0, y: 0 },
+});
+
 export const slideIn = (direction, type, delay, duration) => ({
     hidden: {
         x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
