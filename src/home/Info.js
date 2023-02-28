@@ -21,7 +21,21 @@ const Info = () => {
 
                 <motion.div variants={textVar(0.5)}>
                     <div className="linksChunk">
-                        <div className="lineSeparator"></div>
+                        <motion.div
+                            className="lineSeparator"
+                            initial={{ scale: 0, opacity: 1 }}
+                            whileInView={{ scale: 1, opacity: 1 }}
+                            viewport={{
+                                once: false,
+                                amount: 1,
+                                margin: "-100px 0px -100px 0px",
+                            }}
+                            transition={{
+                                delay: 1,
+                                duration: 1,
+                                type: "ease",
+                            }}
+                        ></motion.div>
                         <div className="contactLinks">
                             <InfoIcon
                                 link="https://github.com/noko12312"
