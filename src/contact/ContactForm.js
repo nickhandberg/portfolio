@@ -30,106 +30,40 @@ const ContactForm = () => {
     }
 
     return (
-        <div>
+        <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{
+                once: false,
+                amount: 0.1,
+                margin: "-100px 0px 0px 0px",
+            }}
+            transition={{
+                delay: 0,
+                duration: 0.5,
+                type: "ease",
+            }}
+        >
             <form id="contactForm" onSubmit={handleSubmit}>
-                <motion.label
-                    htmlFor="email"
-                    initial={{ scale: 0, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    viewport={{
-                        once: false,
-                        amount: 0.75,
-                        margin: "-100px 0px 0px 0px",
-                    }}
-                    transition={{
-                        delay: 0,
-                        duration: 0.5,
-                        type: "ease",
-                    }}
-                >
-                    Email
-                </motion.label>
-                <motion.input
-                    id="email"
-                    type="email"
-                    name="email"
-                    initial={{ scale: 0, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    viewport={{
-                        once: false,
-                        amount: 0.75,
-                        margin: "-100px 0px 0px 0px",
-                    }}
-                    transition={{
-                        delay: 0,
-                        duration: 0.5,
-                        type: "ease",
-                    }}
-                />
+                <label htmlFor="email">Email</label>
+                <input id="email" type="email" name="email" />
                 <ValidationError
                     prefix="Email"
                     field="email"
                     errors={state.errors}
                 />
-                <motion.label
-                    htmlFor="message"
-                    initial={{ scale: 0, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    viewport={{
-                        once: false,
-                        amount: 0.75,
-                        margin: "-100px 0px 0px 0px",
-                    }}
-                    transition={{
-                        delay: 0,
-                        duration: 0.5,
-                        type: "ease",
-                    }}
-                >
-                    Message
-                </motion.label>
-                <motion.textarea
-                    id="message"
-                    rows="10"
-                    name="message"
-                    initial={{ scale: 0, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    viewport={{
-                        once: false,
-                        amount: 0.75,
-                        margin: "-100px 0px 0px 0px",
-                    }}
-                    transition={{
-                        delay: 0,
-                        duration: 0.5,
-                        type: "ease",
-                    }}
-                />
+                <label htmlFor="message">Message</label>
+                <textarea id="message" rows="10" name="message" />
                 <ValidationError
                     prefix="Message"
                     field="message"
                     errors={state.errors}
                 />
-                <motion.button
-                    type="submit"
-                    disabled={state.submitting}
-                    initial={{ scale: 0, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    viewport={{
-                        once: false,
-                        amount: 0.75,
-                        margin: "-100px 0px 0px 0px",
-                    }}
-                    transition={{
-                        delay: 0,
-                        duration: 0.5,
-                        type: "ease",
-                    }}
-                >
+                <button type="submit" disabled={state.submitting}>
                     Send
-                </motion.button>
+                </button>
             </form>
-        </div>
+        </motion.div>
     );
 };
 

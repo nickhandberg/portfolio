@@ -13,6 +13,7 @@ const links = [
     "https://github.com/thebaker10/Fresh-Mart",
     "https://github.com/noko12312/EmeraldTV",
     "https://github.com/DBrueberg/ZombieWar",
+    "",
 ];
 
 const descriptions = [
@@ -20,13 +21,26 @@ const descriptions = [
     "Grocery marketplace site built with React, Tailwind, PHP, Doctrine, and MariaDB",
     "Alternative Android/AndroidTV app for Hulu that uses a built in script to fast forward through ad breaks",
     "ZombieWar simulation in which different classes of zombies and humans engage in a simulated war",
+    "A driving simulation controlled by a neural network made with JavaScript. Trains in browser",
 ];
 
-const isLive = [true, false, false, false];
+const isLive = [true, false, false, false, true];
 
-const liveLinks = ["https://imagegenapp.com", "", "", ""];
+const liveLinks = [
+    "https://imagegenapp.com",
+    "",
+    "",
+    "",
+    "https://nhandberg.xyz/car/index.html",
+];
 
-const titles = ["ImageGenApp", "FreshMart", "EmeraldTV", "ZombieWar"];
+const titles = [
+    "ImageGenApp",
+    "FreshMart",
+    "EmeraldTV",
+    "ZombieWar",
+    "Neural Net Car",
+];
 
 const Portfolio = () => {
     return (

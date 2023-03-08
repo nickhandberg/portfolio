@@ -18,8 +18,8 @@ const PortfolioCard = ({
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{
                 once: false,
-                amount: 0.75,
-                margin: "-100px 0px 0px 0px",
+                amount: 0.5,
+                margin: "0px 0px 0px 0px",
             }}
             transition={{
                 delay: 0,
