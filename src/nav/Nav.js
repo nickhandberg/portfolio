@@ -41,11 +41,6 @@ const Nav = ({ inMenu, clicked, menuClickHandler, preventHide }) => {
                         preventHide={preventHide}
                     />
                     <NavLink
-                        name={"About"}
-                        link={"#about"}
-                        preventHide={preventHide}
-                    />
-                    <NavLink
                         name={"Experience"}
                         link={"#education"}
                         preventHide={preventHide}

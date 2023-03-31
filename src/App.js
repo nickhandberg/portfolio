@@ -1,6 +1,5 @@
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import About from "./about/About";
 import "./App.css";
 import Contact from "./contact/Contact";
 import Education from "./education/Education";
@@ -83,7 +82,6 @@ function App() {
                 />
 
                 <Home />
-                <About />
                 <Education />
                 <Skills />
                 <Portfolio />

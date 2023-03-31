@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { importAll } from "../utils/utils";
-import "./portfolio.css";
 import PortfolioCard from "./PortfolioCard";
+import "./portfolio.css";
 
 const images = importAll(
     require.context("../graphic/portfolio-images/", false, /\.(png|jpe?g|svg)$/)
 );
 
 const links = [
+    "https://github.com/noko12312/forum-app",
     "https://github.com/noko12312/imagegenapp",
     "https://github.com/thebaker10/Fresh-Mart",
     "https://github.com/noko12312/EmeraldTV",
@@ -17,6 +18,7 @@ const links = [
 ];
 
 const descriptions = [
+    "Fully functional reddit clone built using the PERN stack",
     "AI image generation app built using the MERN stack and OpenAI api",
     "Grocery marketplace site built with React, Tailwind, PHP, Doctrine, and MariaDB",
     "Alternative Android/AndroidTV app for Hulu that uses a built in script to fast forward through ad breaks",
@@ -24,9 +26,10 @@ const descriptions = [
     "A driving simulation controlled by a neural network made with JavaScript. Trains in browser",
 ];
 
-const isLive = [true, false, false, false, true];
+const isLive = [true, true, false, false, false, true];
 
 const liveLinks = [
+    "https://sawwit.netlify.app/",
     "https://imagegenapp.com",
     "",
     "",
@@ -35,6 +38,7 @@ const liveLinks = [
 ];
 
 const titles = [
+    "Sawwit",
     "ImageGenApp",
     "FreshMart",
     "EmeraldTV",
@@ -51,7 +55,7 @@ const Portfolio = () => {
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{
-                        once: false,
+                        once: true,
                         amount: 1,
                         margin: "-50px 0px 0px 0px",
                     }}
@@ -64,7 +68,7 @@ const Portfolio = () => {
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{
-                        once: false,
+                        once: true,
                         amount: 1,
                         margin: "-50px 0px 0px 0px",
                     }}

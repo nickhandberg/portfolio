@@ -9,7 +9,7 @@ const GraphItem = ({ title, location, date, details }) => {
             initial={{ scale: 0, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{
-                once: false,
+                once: true,
                 amount: 1,
                 margin: "-100px 0px -100px 0px",
             }}

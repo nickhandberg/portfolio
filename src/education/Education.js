@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { staggerCont, textVar } from "../utils/motion";
-import "./education.css";
 import GraphItem from "./GraphItem";
 import GraphTitle from "./GraphTitle";
+import "./education.css";
 
 const Education = () => {
     return (
@@ -13,13 +13,13 @@ const Education = () => {
                 variants={staggerCont}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: false, amount: 0.25 }}
+                viewport={{ once: true, amount: 0.25 }}
             >
                 <motion.div
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{
-                        once: false,
+                        once: true,
                         amount: 1,
                         margin: "-50px 0px 0px 0px",
                     }}

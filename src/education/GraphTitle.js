@@ -7,7 +7,7 @@ const GraphTitle = ({ title }) => {
             initial={{ scale: 0, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{
-                once: false,
+                once: true,
                 amount: 0.5,
                 margin: "-100px 0px -100px 0px",
             }}

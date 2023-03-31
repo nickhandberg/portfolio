@@ -13,7 +13,7 @@ const Info = () => {
                 variants={staggerCont}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: false, amount: 1 }}
+                viewport={{ once: true, amount: 1 }}
                 exit={{ opacity: 0 }}
             >
                 <RisingText text="Nicholas" delay={0.1} />
@@ -26,7 +26,7 @@ const Info = () => {
                             initial={{ scale: 0, opacity: 1 }}
                             whileInView={{ scale: 1, opacity: 1 }}
                             viewport={{
-                                once: false,
+                                once: true,
                                 amount: 1,
                                 margin: "-100px 0px -100px 0px",
                             }}

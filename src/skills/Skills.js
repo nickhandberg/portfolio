@@ -12,7 +12,7 @@ const Skills = () => {
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{
-                        once: false,
+                        once: true,
                         amount: 1,
                         margin: "-50px 0px 0px 0px",
                     }}

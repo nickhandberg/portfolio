@@ -30,12 +30,6 @@ const Menu = ({ menuClickHandler }) => {
                         menuClickHandler={menuClickHandler}
                     />
                     <MenuItem
-                        name={"About"}
-                        link={"#about"}
-                        delay={0.6}
-                        menuClickHandler={menuClickHandler}
-                    />
-                    <MenuItem
                         name={"Experience"}
                         link={"#education"}
                         delay={0.7}
